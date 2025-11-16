@@ -1,7 +1,7 @@
 ﻿{
 
     "packageName": "Cloudmersive.APIClient.NET.FraudDetection",
-    "packageVersion": "3.0.0",
+    "packageVersion": "3.0.1",
     "netCoreProjectFile": "false",
     "packageGuid": "e8bbe1b4-6cd4-4fee-84b5-ff787275235e"
 }

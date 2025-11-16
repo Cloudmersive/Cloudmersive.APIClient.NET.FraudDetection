@@ -16,10 +16,10 @@ Invoke-WebRequest -Uri 'https://api.cloudmersive.com/fraud-ai/docs/v1/swagger' -
 
 
 
-$csprojpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.CDR/Cloudmersive.APIClient.NET.CDR.csproj
-$csprojtestpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.CDR.Test/Cloudmersive.APIClient.NET.CDR.Test.csproj
-$nuspecpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.CDR/Cloudmersive.APIClient.NET.CDR.nuspec
-$slnpath = Resolve-Path ./client/Cloudmersive.APIClient.NET.CDR.sln
+$csprojpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.FraudDetection/Cloudmersive.APIClient.NET.FraudDetection.csproj
+$csprojtestpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.FraudDetection.Test/Cloudmersive.APIClient.NET.FraudDetection.Test.csproj
+$nuspecpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.FraudDetection/Cloudmersive.APIClient.NET.FraudDetection.nuspec
+$slnpath = Resolve-Path ./client/Cloudmersive.APIClient.NET.FraudDetection.sln
 
 
 (Get-Content $nuspecpath).replace('<title>Swagger Library</title>', "<title>Cloudmersive Convert API Client</title>") | Set-Content $nuspecpath
@@ -60,8 +60,8 @@ $slnpath = Resolve-Path ./client/Cloudmersive.APIClient.NET.CDR.sln
 
 # Packages.config
 
-(Get-Content '.\client\src\Cloudmersive.APIClient.NET.CDR\packages.config').replace('<package id="RestSharp" version="105.1.0" targetFramework="net45" developmentDependency="true" />', '<package id="RestSharp" version="106.6.10" targetFramework="net45" developmentDependency="true" />') | Set-Content '.\client\src\Cloudmersive.APIClient.NET.CDR\packages.config'
-(Get-Content '.\client\src\Cloudmersive.APIClient.NET.CDR\Client\ApiClient.cs').replace('request.AddFile(param.Value.Name, param.Value.Writer, param.Value.FileName, param.Value.ContentType);', 'request.AddFile(param.Value.Name, param.Value.Writer, param.Value.FileName, param.Value.ContentLength, param.Value.ContentType);') | Set-Content '.\client\src\Cloudmersive.APIClient.NET.CDR\Client\ApiClient.cs'
+(Get-Content '.\client\src\Cloudmersive.APIClient.NET.FraudDetection\packages.config').replace('<package id="RestSharp" version="105.1.0" targetFramework="net45" developmentDependency="true" />', '<package id="RestSharp" version="106.6.10" targetFramework="net45" developmentDependency="true" />') | Set-Content '.\client\src\Cloudmersive.APIClient.NET.FraudDetection\packages.config'
+(Get-Content '.\client\src\Cloudmersive.APIClient.NET.FraudDetection\Client\ApiClient.cs').replace('request.AddFile(param.Value.Name, param.Value.Writer, param.Value.FileName, param.Value.ContentType);', 'request.AddFile(param.Value.Name, param.Value.Writer, param.Value.FileName, param.Value.ContentLength, param.Value.ContentType);') | Set-Content '.\client\src\Cloudmersive.APIClient.NET.FraudDetection\Client\ApiClient.cs'
 
 
 

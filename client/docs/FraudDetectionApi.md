@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 <a name="documentdetectfraudadvanced"></a>
 # **DocumentDetectFraudAdvanced**
-> AdvancedFraudDetectionResult DocumentDetectFraudAdvanced (string userEmailAddress = null, bool? userEmailAddressVerified = null, System.IO.Stream inputFile = null)
+> AdvancedFraudDetectionResult DocumentDetectFraudAdvanced (string preprocessing = null, string resultCrossCheck = null, string userEmailAddress = null, bool? userEmailAddressVerified = null, System.IO.Stream inputFile = null)
 
 Advanced AI Fraud Detection for Documents
 
@@ -102,6 +102,8 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new FraudDetectionApi();
+            var preprocessing = preprocessing_example;  // string | Optional: Set the level of image pre-processing to enhance accuracy.  Possible values are 'Auto' and 'None'.  Default is Auto. (optional) 
+            var resultCrossCheck = resultCrossCheck_example;  // string | Optional: Set the level of output accuracy cross-checking to perform on the input.  Possible values are 'None' and 'Advanced'.  Default is None. (optional) 
             var userEmailAddress = userEmailAddress_example;  // string | User email address for context (optional) (optional) 
             var userEmailAddressVerified = true;  // bool? | True if the user's email address was verified (optional) (optional) 
             var inputFile = new System.IO.Stream(); // System.IO.Stream | Input document, or photos of a document, to perform fraud detection on (optional) 
@@ -109,7 +111,7 @@ namespace Example
             try
             {
                 // Advanced AI Fraud Detection for Documents
-                AdvancedFraudDetectionResult result = apiInstance.DocumentDetectFraudAdvanced(userEmailAddress, userEmailAddressVerified, inputFile);
+                AdvancedFraudDetectionResult result = apiInstance.DocumentDetectFraudAdvanced(preprocessing, resultCrossCheck, userEmailAddress, userEmailAddressVerified, inputFile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -125,6 +127,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **preprocessing** | **string**| Optional: Set the level of image pre-processing to enhance accuracy.  Possible values are &#39;Auto&#39; and &#39;None&#39;.  Default is Auto. | [optional] 
+ **resultCrossCheck** | **string**| Optional: Set the level of output accuracy cross-checking to perform on the input.  Possible values are &#39;None&#39; and &#39;Advanced&#39;.  Default is None. | [optional] 
  **userEmailAddress** | **string**| User email address for context (optional) | [optional] 
  **userEmailAddressVerified** | **bool?**| True if the user&#39;s email address was verified (optional) | [optional] 
  **inputFile** | **System.IO.Stream**| Input document, or photos of a document, to perform fraud detection on | [optional] 

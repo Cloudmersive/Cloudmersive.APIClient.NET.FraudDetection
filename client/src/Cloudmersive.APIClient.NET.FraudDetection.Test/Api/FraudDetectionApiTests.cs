@@ -83,10 +83,12 @@ namespace Cloudmersive.APIClient.NET.FraudDetection.Test
         public void DocumentDetectFraudAdvancedTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string preprocessing = null;
+            //string resultCrossCheck = null;
             //string userEmailAddress = null;
             //bool? userEmailAddressVerified = null;
             //System.IO.Stream inputFile = null;
-            //var response = instance.DocumentDetectFraudAdvanced(userEmailAddress, userEmailAddressVerified, inputFile);
+            //var response = instance.DocumentDetectFraudAdvanced(preprocessing, resultCrossCheck, userEmailAddress, userEmailAddressVerified, inputFile);
             //Assert.IsInstanceOf<AdvancedFraudDetectionResult> (response, "response is AdvancedFraudDetectionResult");
         }
         

@@ -5,7 +5,7 @@ Easily and directly scan and block fraudulent security threats in input.
 This C# SDK is for the [Cloudmersive AI Fraud Detection API](https://cloudmersive.com/ai-fraud-detection-api):
 
 - API version: v1
-- SDK version: 3.0.1
+- SDK version: 3.0.2
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>

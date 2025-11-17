@@ -131,12 +131,28 @@ namespace Cloudmersive.APIClient.NET.FraudDetection.Test
             // TODO unit test for the property 'ContainsEmploymentAgreement'
         }
         /// <summary>
+        /// Test the property 'ContainsExpiredDocument'
+        /// </summary>
+        [Test]
+        public void ContainsExpiredDocumentTest()
+        {
+            // TODO unit test for the property 'ContainsExpiredDocument'
+        }
+        /// <summary>
         /// Test the property 'AnalysisRationale'
         /// </summary>
         [Test]
         public void AnalysisRationaleTest()
         {
             // TODO unit test for the property 'AnalysisRationale'
+        }
+        /// <summary>
+        /// Test the property 'DocumentClass'
+        /// </summary>
+        [Test]
+        public void DocumentClassTest()
+        {
+            // TODO unit test for the property 'DocumentClass'
         }
 
     }

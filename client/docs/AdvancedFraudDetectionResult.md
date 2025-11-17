@@ -11,7 +11,9 @@ Name | Type | Description | Notes
 **ContainsAssetTransfer** | **bool?** | True if the document contains an asset transfer | [optional] 
 **ContainsPurchaseAgreement** | **bool?** | True if the document contains a purchase agreement | [optional] 
 **ContainsEmploymentAgreement** | **bool?** | True if the document contains an employment agreement | [optional] 
+**ContainsExpiredDocument** | **bool?** | True if the document is expired | [optional] 
 **AnalysisRationale** | **string** | Rationale on why the document was classified as such | [optional] 
+**DocumentClass** | **string** | Standardized class of the input document | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

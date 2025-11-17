@@ -59,6 +59,18 @@
         "parameters": [
           {
             "in": "header",
+            "name": "preprocessing",
+            "description": "Optional: Set the level of image pre-processing to enhance accuracy.  Possible values are 'Auto' and 'None'.  Default is Auto.",
+            "type": "string"
+          },
+          {
+            "in": "header",
+            "name": "resultCrossCheck",
+            "description": "Optional: Set the level of output accuracy cross-checking to perform on the input.  Possible values are 'None' and 'Advanced'.  Default is None.",
+            "type": "string"
+          },
+          {
+            "in": "header",
             "name": "UserEmailAddress",
             "description": "User email address for context (optional)",
             "type": "string"
@@ -125,8 +137,16 @@
           "description": "True if the document contains an employment agreement",
           "type": "boolean"
         },
+        "ContainsExpiredDocument": {
+          "description": "True if the document is expired",
+          "type": "boolean"
+        },
         "AnalysisRationale": {
           "description": "Rationale on why the document was classified as such",
+          "type": "string"
+        },
+        "DocumentClass": {
+          "description": "Standardized class of the input document",
           "type": "string"
         }
       },

@@ -52,11 +52,13 @@ namespace Cloudmersive.APIClient.NET.FraudDetection.Api
         /// Perform advanced fraud detection and classification on input document and user context.  Input document formats supported include DOCX, PDF, PNG and JPG.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.FraudDetection.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="preprocessing">Optional: Set the level of image pre-processing to enhance accuracy.  Possible values are &#39;Auto&#39; and &#39;None&#39;.  Default is Auto. (optional)</param>
+        /// <param name="resultCrossCheck">Optional: Set the level of output accuracy cross-checking to perform on the input.  Possible values are &#39;None&#39; and &#39;Advanced&#39;.  Default is None. (optional)</param>
         /// <param name="userEmailAddress">User email address for context (optional) (optional)</param>
         /// <param name="userEmailAddressVerified">True if the user&#39;s email address was verified (optional) (optional)</param>
         /// <param name="inputFile">Input document, or photos of a document, to perform fraud detection on (optional)</param>
         /// <returns>AdvancedFraudDetectionResult</returns>
-        AdvancedFraudDetectionResult DocumentDetectFraudAdvanced (string userEmailAddress = null, bool? userEmailAddressVerified = null, System.IO.Stream inputFile = null);
+        AdvancedFraudDetectionResult DocumentDetectFraudAdvanced (string preprocessing = null, string resultCrossCheck = null, string userEmailAddress = null, bool? userEmailAddressVerified = null, System.IO.Stream inputFile = null);
 
         /// <summary>
         /// Advanced AI Fraud Detection for Documents
@@ -65,11 +67,13 @@ namespace Cloudmersive.APIClient.NET.FraudDetection.Api
         /// Perform advanced fraud detection and classification on input document and user context.  Input document formats supported include DOCX, PDF, PNG and JPG.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.FraudDetection.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="preprocessing">Optional: Set the level of image pre-processing to enhance accuracy.  Possible values are &#39;Auto&#39; and &#39;None&#39;.  Default is Auto. (optional)</param>
+        /// <param name="resultCrossCheck">Optional: Set the level of output accuracy cross-checking to perform on the input.  Possible values are &#39;None&#39; and &#39;Advanced&#39;.  Default is None. (optional)</param>
         /// <param name="userEmailAddress">User email address for context (optional) (optional)</param>
         /// <param name="userEmailAddressVerified">True if the user&#39;s email address was verified (optional) (optional)</param>
         /// <param name="inputFile">Input document, or photos of a document, to perform fraud detection on (optional)</param>
         /// <returns>ApiResponse of AdvancedFraudDetectionResult</returns>
-        ApiResponse<AdvancedFraudDetectionResult> DocumentDetectFraudAdvancedWithHttpInfo (string userEmailAddress = null, bool? userEmailAddressVerified = null, System.IO.Stream inputFile = null);
+        ApiResponse<AdvancedFraudDetectionResult> DocumentDetectFraudAdvancedWithHttpInfo (string preprocessing = null, string resultCrossCheck = null, string userEmailAddress = null, bool? userEmailAddressVerified = null, System.IO.Stream inputFile = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -100,11 +104,13 @@ namespace Cloudmersive.APIClient.NET.FraudDetection.Api
         /// Perform advanced fraud detection and classification on input document and user context.  Input document formats supported include DOCX, PDF, PNG and JPG.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.FraudDetection.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="preprocessing">Optional: Set the level of image pre-processing to enhance accuracy.  Possible values are &#39;Auto&#39; and &#39;None&#39;.  Default is Auto. (optional)</param>
+        /// <param name="resultCrossCheck">Optional: Set the level of output accuracy cross-checking to perform on the input.  Possible values are &#39;None&#39; and &#39;Advanced&#39;.  Default is None. (optional)</param>
         /// <param name="userEmailAddress">User email address for context (optional) (optional)</param>
         /// <param name="userEmailAddressVerified">True if the user&#39;s email address was verified (optional) (optional)</param>
         /// <param name="inputFile">Input document, or photos of a document, to perform fraud detection on (optional)</param>
         /// <returns>Task of AdvancedFraudDetectionResult</returns>
-        System.Threading.Tasks.Task<AdvancedFraudDetectionResult> DocumentDetectFraudAdvancedAsync (string userEmailAddress = null, bool? userEmailAddressVerified = null, System.IO.Stream inputFile = null);
+        System.Threading.Tasks.Task<AdvancedFraudDetectionResult> DocumentDetectFraudAdvancedAsync (string preprocessing = null, string resultCrossCheck = null, string userEmailAddress = null, bool? userEmailAddressVerified = null, System.IO.Stream inputFile = null);
 
         /// <summary>
         /// Advanced AI Fraud Detection for Documents
@@ -113,11 +119,13 @@ namespace Cloudmersive.APIClient.NET.FraudDetection.Api
         /// Perform advanced fraud detection and classification on input document and user context.  Input document formats supported include DOCX, PDF, PNG and JPG.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.FraudDetection.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="preprocessing">Optional: Set the level of image pre-processing to enhance accuracy.  Possible values are &#39;Auto&#39; and &#39;None&#39;.  Default is Auto. (optional)</param>
+        /// <param name="resultCrossCheck">Optional: Set the level of output accuracy cross-checking to perform on the input.  Possible values are &#39;None&#39; and &#39;Advanced&#39;.  Default is None. (optional)</param>
         /// <param name="userEmailAddress">User email address for context (optional) (optional)</param>
         /// <param name="userEmailAddressVerified">True if the user&#39;s email address was verified (optional) (optional)</param>
         /// <param name="inputFile">Input document, or photos of a document, to perform fraud detection on (optional)</param>
         /// <returns>Task of ApiResponse (AdvancedFraudDetectionResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AdvancedFraudDetectionResult>> DocumentDetectFraudAdvancedAsyncWithHttpInfo (string userEmailAddress = null, bool? userEmailAddressVerified = null, System.IO.Stream inputFile = null);
+        System.Threading.Tasks.Task<ApiResponse<AdvancedFraudDetectionResult>> DocumentDetectFraudAdvancedAsyncWithHttpInfo (string preprocessing = null, string resultCrossCheck = null, string userEmailAddress = null, bool? userEmailAddressVerified = null, System.IO.Stream inputFile = null);
         #endregion Asynchronous Operations
     }
 
@@ -365,13 +373,15 @@ namespace Cloudmersive.APIClient.NET.FraudDetection.Api
         /// Advanced AI Fraud Detection for Documents Perform advanced fraud detection and classification on input document and user context.  Input document formats supported include DOCX, PDF, PNG and JPG.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.FraudDetection.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="preprocessing">Optional: Set the level of image pre-processing to enhance accuracy.  Possible values are &#39;Auto&#39; and &#39;None&#39;.  Default is Auto. (optional)</param>
+        /// <param name="resultCrossCheck">Optional: Set the level of output accuracy cross-checking to perform on the input.  Possible values are &#39;None&#39; and &#39;Advanced&#39;.  Default is None. (optional)</param>
         /// <param name="userEmailAddress">User email address for context (optional) (optional)</param>
         /// <param name="userEmailAddressVerified">True if the user&#39;s email address was verified (optional) (optional)</param>
         /// <param name="inputFile">Input document, or photos of a document, to perform fraud detection on (optional)</param>
         /// <returns>AdvancedFraudDetectionResult</returns>
-        public AdvancedFraudDetectionResult DocumentDetectFraudAdvanced (string userEmailAddress = null, bool? userEmailAddressVerified = null, System.IO.Stream inputFile = null)
+        public AdvancedFraudDetectionResult DocumentDetectFraudAdvanced (string preprocessing = null, string resultCrossCheck = null, string userEmailAddress = null, bool? userEmailAddressVerified = null, System.IO.Stream inputFile = null)
         {
-             ApiResponse<AdvancedFraudDetectionResult> localVarResponse = DocumentDetectFraudAdvancedWithHttpInfo(userEmailAddress, userEmailAddressVerified, inputFile);
+             ApiResponse<AdvancedFraudDetectionResult> localVarResponse = DocumentDetectFraudAdvancedWithHttpInfo(preprocessing, resultCrossCheck, userEmailAddress, userEmailAddressVerified, inputFile);
              return localVarResponse.Data;
         }
 
@@ -379,11 +389,13 @@ namespace Cloudmersive.APIClient.NET.FraudDetection.Api
         /// Advanced AI Fraud Detection for Documents Perform advanced fraud detection and classification on input document and user context.  Input document formats supported include DOCX, PDF, PNG and JPG.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.FraudDetection.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="preprocessing">Optional: Set the level of image pre-processing to enhance accuracy.  Possible values are &#39;Auto&#39; and &#39;None&#39;.  Default is Auto. (optional)</param>
+        /// <param name="resultCrossCheck">Optional: Set the level of output accuracy cross-checking to perform on the input.  Possible values are &#39;None&#39; and &#39;Advanced&#39;.  Default is None. (optional)</param>
         /// <param name="userEmailAddress">User email address for context (optional) (optional)</param>
         /// <param name="userEmailAddressVerified">True if the user&#39;s email address was verified (optional) (optional)</param>
         /// <param name="inputFile">Input document, or photos of a document, to perform fraud detection on (optional)</param>
         /// <returns>ApiResponse of AdvancedFraudDetectionResult</returns>
-        public ApiResponse< AdvancedFraudDetectionResult > DocumentDetectFraudAdvancedWithHttpInfo (string userEmailAddress = null, bool? userEmailAddressVerified = null, System.IO.Stream inputFile = null)
+        public ApiResponse< AdvancedFraudDetectionResult > DocumentDetectFraudAdvancedWithHttpInfo (string preprocessing = null, string resultCrossCheck = null, string userEmailAddress = null, bool? userEmailAddressVerified = null, System.IO.Stream inputFile = null)
         {
 
             var localVarPath = "/fraud-ai/detection/document/advanced";
@@ -410,6 +422,8 @@ namespace Cloudmersive.APIClient.NET.FraudDetection.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (preprocessing != null) localVarHeaderParams.Add("preprocessing", this.Configuration.ApiClient.ParameterToString(preprocessing)); // header parameter
+            if (resultCrossCheck != null) localVarHeaderParams.Add("resultCrossCheck", this.Configuration.ApiClient.ParameterToString(resultCrossCheck)); // header parameter
             if (userEmailAddress != null) localVarHeaderParams.Add("UserEmailAddress", this.Configuration.ApiClient.ParameterToString(userEmailAddress)); // header parameter
             if (userEmailAddressVerified != null) localVarHeaderParams.Add("UserEmailAddressVerified", this.Configuration.ApiClient.ParameterToString(userEmailAddressVerified)); // header parameter
             if (inputFile != null) localVarFileParams.Add("InputFile", this.Configuration.ApiClient.ParameterToFile("InputFile", inputFile));
@@ -442,13 +456,15 @@ namespace Cloudmersive.APIClient.NET.FraudDetection.Api
         /// Advanced AI Fraud Detection for Documents Perform advanced fraud detection and classification on input document and user context.  Input document formats supported include DOCX, PDF, PNG and JPG.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.FraudDetection.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="preprocessing">Optional: Set the level of image pre-processing to enhance accuracy.  Possible values are &#39;Auto&#39; and &#39;None&#39;.  Default is Auto. (optional)</param>
+        /// <param name="resultCrossCheck">Optional: Set the level of output accuracy cross-checking to perform on the input.  Possible values are &#39;None&#39; and &#39;Advanced&#39;.  Default is None. (optional)</param>
         /// <param name="userEmailAddress">User email address for context (optional) (optional)</param>
         /// <param name="userEmailAddressVerified">True if the user&#39;s email address was verified (optional) (optional)</param>
         /// <param name="inputFile">Input document, or photos of a document, to perform fraud detection on (optional)</param>
         /// <returns>Task of AdvancedFraudDetectionResult</returns>
-        public async System.Threading.Tasks.Task<AdvancedFraudDetectionResult> DocumentDetectFraudAdvancedAsync (string userEmailAddress = null, bool? userEmailAddressVerified = null, System.IO.Stream inputFile = null)
+        public async System.Threading.Tasks.Task<AdvancedFraudDetectionResult> DocumentDetectFraudAdvancedAsync (string preprocessing = null, string resultCrossCheck = null, string userEmailAddress = null, bool? userEmailAddressVerified = null, System.IO.Stream inputFile = null)
         {
-             ApiResponse<AdvancedFraudDetectionResult> localVarResponse = await DocumentDetectFraudAdvancedAsyncWithHttpInfo(userEmailAddress, userEmailAddressVerified, inputFile);
+             ApiResponse<AdvancedFraudDetectionResult> localVarResponse = await DocumentDetectFraudAdvancedAsyncWithHttpInfo(preprocessing, resultCrossCheck, userEmailAddress, userEmailAddressVerified, inputFile);
              return localVarResponse.Data;
 
         }
@@ -457,11 +473,13 @@ namespace Cloudmersive.APIClient.NET.FraudDetection.Api
         /// Advanced AI Fraud Detection for Documents Perform advanced fraud detection and classification on input document and user context.  Input document formats supported include DOCX, PDF, PNG and JPG.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.FraudDetection.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="preprocessing">Optional: Set the level of image pre-processing to enhance accuracy.  Possible values are &#39;Auto&#39; and &#39;None&#39;.  Default is Auto. (optional)</param>
+        /// <param name="resultCrossCheck">Optional: Set the level of output accuracy cross-checking to perform on the input.  Possible values are &#39;None&#39; and &#39;Advanced&#39;.  Default is None. (optional)</param>
         /// <param name="userEmailAddress">User email address for context (optional) (optional)</param>
         /// <param name="userEmailAddressVerified">True if the user&#39;s email address was verified (optional) (optional)</param>
         /// <param name="inputFile">Input document, or photos of a document, to perform fraud detection on (optional)</param>
         /// <returns>Task of ApiResponse (AdvancedFraudDetectionResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AdvancedFraudDetectionResult>> DocumentDetectFraudAdvancedAsyncWithHttpInfo (string userEmailAddress = null, bool? userEmailAddressVerified = null, System.IO.Stream inputFile = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AdvancedFraudDetectionResult>> DocumentDetectFraudAdvancedAsyncWithHttpInfo (string preprocessing = null, string resultCrossCheck = null, string userEmailAddress = null, bool? userEmailAddressVerified = null, System.IO.Stream inputFile = null)
         {
 
             var localVarPath = "/fraud-ai/detection/document/advanced";
@@ -488,6 +506,8 @@ namespace Cloudmersive.APIClient.NET.FraudDetection.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (preprocessing != null) localVarHeaderParams.Add("preprocessing", this.Configuration.ApiClient.ParameterToString(preprocessing)); // header parameter
+            if (resultCrossCheck != null) localVarHeaderParams.Add("resultCrossCheck", this.Configuration.ApiClient.ParameterToString(resultCrossCheck)); // header parameter
             if (userEmailAddress != null) localVarHeaderParams.Add("UserEmailAddress", this.Configuration.ApiClient.ParameterToString(userEmailAddress)); // header parameter
             if (userEmailAddressVerified != null) localVarHeaderParams.Add("UserEmailAddressVerified", this.Configuration.ApiClient.ParameterToString(userEmailAddressVerified)); // header parameter
             if (inputFile != null) localVarFileParams.Add("InputFile", this.Configuration.ApiClient.ParameterToFile("InputFile", inputFile));

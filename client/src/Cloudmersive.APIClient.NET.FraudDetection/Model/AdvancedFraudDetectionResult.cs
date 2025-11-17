@@ -41,8 +41,10 @@ namespace Cloudmersive.APIClient.NET.FraudDetection.Model
         /// <param name="containsAssetTransfer">True if the document contains an asset transfer.</param>
         /// <param name="containsPurchaseAgreement">True if the document contains a purchase agreement.</param>
         /// <param name="containsEmploymentAgreement">True if the document contains an employment agreement.</param>
+        /// <param name="containsExpiredDocument">True if the document is expired.</param>
         /// <param name="analysisRationale">Rationale on why the document was classified as such.</param>
-        public AdvancedFraudDetectionResult(bool? successful = default(bool?), bool? cleanResult = default(bool?), double? fraudRiskLevel = default(double?), bool? containsFinancialLiability = default(bool?), bool? containsSensitiveInformationCollection = default(bool?), bool? containsAssetTransfer = default(bool?), bool? containsPurchaseAgreement = default(bool?), bool? containsEmploymentAgreement = default(bool?), string analysisRationale = default(string))
+        /// <param name="documentClass">Standardized class of the input document.</param>
+        public AdvancedFraudDetectionResult(bool? successful = default(bool?), bool? cleanResult = default(bool?), double? fraudRiskLevel = default(double?), bool? containsFinancialLiability = default(bool?), bool? containsSensitiveInformationCollection = default(bool?), bool? containsAssetTransfer = default(bool?), bool? containsPurchaseAgreement = default(bool?), bool? containsEmploymentAgreement = default(bool?), bool? containsExpiredDocument = default(bool?), string analysisRationale = default(string), string documentClass = default(string))
         {
             this.Successful = successful;
             this.CleanResult = cleanResult;
@@ -52,7 +54,9 @@ namespace Cloudmersive.APIClient.NET.FraudDetection.Model
             this.ContainsAssetTransfer = containsAssetTransfer;
             this.ContainsPurchaseAgreement = containsPurchaseAgreement;
             this.ContainsEmploymentAgreement = containsEmploymentAgreement;
+            this.ContainsExpiredDocument = containsExpiredDocument;
             this.AnalysisRationale = analysisRationale;
+            this.DocumentClass = documentClass;
         }
         
         /// <summary>
@@ -112,11 +116,25 @@ namespace Cloudmersive.APIClient.NET.FraudDetection.Model
         public bool? ContainsEmploymentAgreement { get; set; }
 
         /// <summary>
+        /// True if the document is expired
+        /// </summary>
+        /// <value>True if the document is expired</value>
+        [DataMember(Name="ContainsExpiredDocument", EmitDefaultValue=false)]
+        public bool? ContainsExpiredDocument { get; set; }
+
+        /// <summary>
         /// Rationale on why the document was classified as such
         /// </summary>
         /// <value>Rationale on why the document was classified as such</value>
         [DataMember(Name="AnalysisRationale", EmitDefaultValue=false)]
         public string AnalysisRationale { get; set; }
+
+        /// <summary>
+        /// Standardized class of the input document
+        /// </summary>
+        /// <value>Standardized class of the input document</value>
+        [DataMember(Name="DocumentClass", EmitDefaultValue=false)]
+        public string DocumentClass { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -134,7 +152,9 @@ namespace Cloudmersive.APIClient.NET.FraudDetection.Model
             sb.Append("  ContainsAssetTransfer: ").Append(ContainsAssetTransfer).Append("\n");
             sb.Append("  ContainsPurchaseAgreement: ").Append(ContainsPurchaseAgreement).Append("\n");
             sb.Append("  ContainsEmploymentAgreement: ").Append(ContainsEmploymentAgreement).Append("\n");
+            sb.Append("  ContainsExpiredDocument: ").Append(ContainsExpiredDocument).Append("\n");
             sb.Append("  AnalysisRationale: ").Append(AnalysisRationale).Append("\n");
+            sb.Append("  DocumentClass: ").Append(DocumentClass).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -210,9 +230,19 @@ namespace Cloudmersive.APIClient.NET.FraudDetection.Model
                     this.ContainsEmploymentAgreement.Equals(input.ContainsEmploymentAgreement))
                 ) && 
                 (
+                    this.ContainsExpiredDocument == input.ContainsExpiredDocument ||
+                    (this.ContainsExpiredDocument != null &&
+                    this.ContainsExpiredDocument.Equals(input.ContainsExpiredDocument))
+                ) && 
+                (
                     this.AnalysisRationale == input.AnalysisRationale ||
                     (this.AnalysisRationale != null &&
                     this.AnalysisRationale.Equals(input.AnalysisRationale))
+                ) && 
+                (
+                    this.DocumentClass == input.DocumentClass ||
+                    (this.DocumentClass != null &&
+                    this.DocumentClass.Equals(input.DocumentClass))
                 );
         }
 
@@ -241,8 +271,12 @@ namespace Cloudmersive.APIClient.NET.FraudDetection.Model
                     hashCode = hashCode * 59 + this.ContainsPurchaseAgreement.GetHashCode();
                 if (this.ContainsEmploymentAgreement != null)
                     hashCode = hashCode * 59 + this.ContainsEmploymentAgreement.GetHashCode();
+                if (this.ContainsExpiredDocument != null)
+                    hashCode = hashCode * 59 + this.ContainsExpiredDocument.GetHashCode();
                 if (this.AnalysisRationale != null)
                     hashCode = hashCode * 59 + this.AnalysisRationale.GetHashCode();
+                if (this.DocumentClass != null)
+                    hashCode = hashCode * 59 + this.DocumentClass.GetHashCode();
                 return hashCode;
             }
         }
